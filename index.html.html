@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Alice Mariano | Estética & Odontologia em Vila da Serra, Nova Lima - MG</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display for headers, Plus Jakarta Sans for modern body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        champagne: {
+                            50: '#FAF8F5',
+                            100: '#F4EFE6',
+                            200: '#E6DBCB',
+                            300: '#D8C6AE',
+                            400: '#C2A786',
+                            500: '#AC8B62',
+                            600: '#8E6F4A',
+                            700: '#6F5538',
+                        },
+                        clinicDark: '#1E2229',
+                        clinicGold: '#C5A880',
+                        clinicGoldHover: '#B3946B',
+                        clinicAccent: '#F3ECE4',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF8F5;
+            color: #2D3748;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #B3946B 0%, #D4BF9A 50%, #8E6F4A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #C5A880 0%, #B3946B 100%);
+        }
+        .gold-gradient-bg:hover {
+            background: linear-gradient(135deg, #B3946B 0%, #9F8057 100%);
+        }
+        .hero-pattern {
+            background-image: radial-gradient(rgba(197, 168, 128, 0.15) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 218, 203, 0.6);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-champagne-200 selection:text-champagne-700">
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5531971377741?text=Ol%C3%A1%2C%20Dra.%20Alice!%20Gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-emerald-600 text-white px-5 py-3.5 rounded-full shadow-2xl hover:bg-emerald-700 hover:scale-105 transition-all duration-300 group"
+       aria-label="Falar no WhatsApp">
+        <span class="relative flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+        </span>
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="font-medium text-sm hidden md:inline">Agendar Consulta</span>
+    </a>
+
+    <!-- Top Status Bar & Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-champagne-100 transition-all duration-200">
+        <!-- Top bar with schedule alert & rating -->
+        <div class="bg-clinicDark text-champagne-100 text-xs py-2 px-4 sm:px-8">
+            <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+                <div class="flex items-center gap-4">
+                    <span class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-location-dot text-champagne-400"></i>
+                        Vila da Serra, Nova Lima - MG
+                    </span>
+                    <span class="hidden md:inline text-gray-500">|</span>
+                    <span id="liveStatusBadge" class="hidden md:inline-flex items-center gap-1.5 font-medium px-2 py-0.5 rounded text-xs bg-emerald-950 text-emerald-300 border border-emerald-800">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Verificando horário...
+                    </span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.google.com/search?q=Dra+Alice+Mariano+Nova+Lima" target="_blank" class="flex items-center gap-1 hover:text-white transition">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="font-bold text-white ml-1">5,0</span>
+                        <span class="text-gray-400">(Google)</span>
+                    </a>
+                    <span class="text-gray-500">|</span>
+                    <a href="tel:31971377741" class="hover:text-champagne-300 flex items-center gap-1">
+                        <i class="fa-solid fa-phone text-xs"></i> (31) 97137-7741
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation Bar -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+            <a href="#" class="flex flex-col">
+                <span class="font-serif text-2xl sm:text-3xl font-semibold tracking-wide text-clinicDark">
+                    Dra. Alice Mariano
+                </span>
+                <span class="text-xs uppercase tracking-[0.25em] text-champagne-500 font-medium -mt-1">
+                    Estética & Odontologia
+                </span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-700">
+                <a href="#sobre" class="hover:text-champagne-600 transition">Sobre</a>
+                <a href="#servicos" class="hover:text-champagne-600 transition">Procedimentos</a>
+                <a href="#diferenciais" class="hover:text-champagne-600 transition">Diferenciais</a>
+                <a href="#depoimentos" class="hover:text-champagne-600 transition">Avaliações</a>
+                <a href="#localizacao" class="hover:text-champagne-600 transition">Localização</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="https://wa.me/5531971377741?text=Ol%C3%A1%2C%20Dra.%20Alice!%20Gostaria%20de%20agendar%20uma%20consulta." 
+                   target="_blank"
+                   class="gold-gradient-bg text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition duration-300 flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Agendar Consulta</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" aria-label="Abrir menu" class="lg:hidden text-clinicDark p-2 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-champagne-100 px-6 py-5 flex-col gap-4 text-gray-700">
+            <a href="#sobre" class="mobile-link py-2 border-b border-gray-100 hover:text-champagne-600">Sobre a Dra. Alice</a>
+            <a href="#servicos" class="mobile-link py-2 border-b border-gray-100 hover:text-champagne-600">Procedimentos Estéticos</a>
+            <a href="#diferenciais" class="mobile-link py-2 border-b border-gray-100 hover:text-champagne-600">Nossos Diferenciais</a>
+            <a href="#depoimentos" class="mobile-link py-2 border-b border-gray-100 hover:text-champagne-600">Depoimentos dos Pacientes</a>
+            <a href="#localizacao" class="mobile-link py-2 border-b border-gray-100 hover:text-champagne-600">Localização e Horários</a>
+            <a href="https://wa.me/5531971377741?text=Ol%C3%A1%2C%20Dra.%20Alice!%20Gostaria%20de%20agendar%20uma%20consulta." 
+               target="_blank" 
+               class="gold-gradient-bg text-white text-center py-3 rounded-full font-medium mt-2 flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Agendar no WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative hero-pattern overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-champagne-100 border border-champagne-200 text-champagne-700 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-sparkles text-champagne-500"></i>
+                        Estética Avançada & Harmonização Bucofacial
+                    </div>
+
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-clinicDark leading-tight">
+                        Realce sua beleza natural com <span class="gold-gradient-text">precisão & elegância</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Atendimento odontológico e estético exclusivo na Vila da Serra. Protocolos personalizados para ressaltar seus traços únicos de forma harmônica, segura e sutil.
+                    </p>
+
+                    <!-- Trust Indicators Grid -->
+                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-6 text-xs sm:text-sm text-gray-700">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-champagne-100 text-champagne-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <span class="text-left font-medium">Protocolos de Segurança Avançados</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-champagne-100 text-champagne-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <span class="text-left font-medium">Atendimento Humanizado</span>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action Group -->
+                    <div class="pt-4 flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4">
+                        <a href="https://wa.me/5531971377741?text=Ol%C3%A1%2C%20Dra.%20Alice!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." 
+                           target="_blank"
+                           class="w-full sm:w-auto gold-gradient-bg text-white px-8 py-4 rounded-full font-medium shadow-xl hover:shadow-2xl transition duration-300 flex items-center justify-center gap-3 text-base">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Agendar Avaliação VIP</span>
+                        </a>
+
+                        <a href="#servicos" 
+                           class="w-full sm:w-auto bg-white border border-champagne-300 text-clinicDark hover:bg-champagne-50 px-8 py-4 rounded-full font-medium transition duration-300 text-center text-base">
+                            Conhecer Tratamentos
+                        </a>
+                    </div>
+
+                    <!-- Google Reviews Highlight Badge -->
+                    <div class="pt-6 border-t border-champagne-200/60 inline-flex items-center gap-4 text-left">
+                        <div class="flex -space-x-2">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=120" alt="Paciente">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=120" alt="Paciente">
+                            <div class="h-10 w-10 rounded-full bg-champagne-200 ring-2 ring-white flex items-center justify-center text-xs font-bold text-champagne-800">
+                                +50
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1 text-amber-400 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="text-clinicDark font-bold text-sm ml-1">5.0</span>
+                            </div>
+                            <p class="text-xs text-gray-500">Nota máxima nas avaliações verificadas do Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Section -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Background Accent Frame -->
+                        <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-champagne-300 to-champagne-100 opacity-60 blur-xl"></div>
+                        
+                        <!-- Hero Image Card -->
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" 
+                                 alt="Consultório Odontológico Dra. Alice Mariano" 
+                                 class="w-full h-[450px] object-cover object-center"
+                                 onerror="this.src='https://placehold.co/800x600/FAF8F5/6F5538?text=Consult%C3%B3rio+Dra.+Alice'">
+                            
+                            <!-- Floating Card overlay -->
+                            <div class="absolute bottom-4 left-4 right-4 glass-card p-4 rounded-xl shadow-lg border border-white/60">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-3 bg-champagne-500 text-white rounded-lg">
+                                        <i class="fa-solid fa-clinic-medical text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-serif font-bold text-clinicDark text-sm">Ambiente Exclusivo em Nova Lima</h4>
+                                        <p class="text-xs text-gray-600">R. Min. Orozimbo Nonato - Vila da Serra</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Badge Top Right -->
+                        <div class="absolute -top-4 -right-4 bg-white p-3.5 rounded-2xl shadow-xl border border-champagne-100 flex items-center gap-3 hidden sm:flex">
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                                <i class="fa-solid fa-certificate text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Atendimento</p>
+                                <p class="text-xs font-bold text-clinicDark">100% Personalizado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours & Quick Info Strip -->
+    <section class="bg-clinicDark text-white py-8 border-y border-champagne-700/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-gray-800">
+                <div class="flex items-center justify-center md:justify-start gap-4 pb-4 md:pb-0">
+                    <i class="fa-solid fa-clock text-2xl text-champagne-400"></i>
+                    <div>
+                        <h4 class="text-sm font-semibold text-champagne-200 uppercase tracking-wider">Horários Flexíveis</h4>
+                        <p class="text-xs text-gray-300 mt-0.5">Segundas a Sextas (Consultas com hora marcada)</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start gap-4 py-4 md:py-0 md:pl-6">
+                    <i class="fa-solid fa-map-location-dot text-2xl text-champagne-400"></i>
+                    <div>
+                        <h4 class="text-sm font-semibold text-champagne-200 uppercase tracking-wider">Localização Premium</h4>
+                        <p class="text-xs text-gray-300 mt-0.5">Vila da Serra - Estac. e segurança no local</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center md:justify-start gap-4 pt-4 md:pt-0 md:pl-6">
+                    <i class="fa-solid fa-headset text-2xl text-champagne-400"></i>
+                    <div>
+                        <h4 class="text-sm font-semibold text-champagne-200 uppercase tracking-wider">Atendimento Direto</h4>
+                        <p class="text-xs text-gray-300 mt-0.5">WhatsApp: (31) 97137-7741</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Image Column -->
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <div class="relative">
+                        <div class="absolute -bottom-6 -left-6 w-full h-full border-2 border-champagne-300 rounded-3xl -z-0 hidden sm:block"></div>
+                        <div class="relative rounded-3xl overflow-hidden shadow-xl z-10">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800" 
+                                 alt="Dra. Alice Mariano" 
+                                 class="w-full h-[500px] object-cover object-top"
+                                 onerror="this.src='https://placehold.co/600x800/E6DBCB/1E2229?text=Dra.+Alice+Mariano'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+                                <p class="font-serif text-2xl font-bold">Dra. Alice Mariano</p>
+                                <p class="text-xs text-champagne-200 uppercase tracking-widest">Odontologia & Estética Facial</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content Column -->
+                <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-champagne-600 font-semibold text-xs tracking-widest uppercase">
+                        <span class="w-8 h-[2px] bg-champagne-400"></span>
+                        Sobre a Profissional
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-clinicDark leading-snug">
+                        Compromisso com a excelência, naturalidade e bem-estar
+                    </h2>
+
+                    <p class="text-gray-600 leading-relaxed font-light">
+                        A Dra. Alice Mariano dedica sua trajetória ao aperfeiçoamento constante em tratamentos estéticos e odontológicos de alta precisão. Com foco em harmonização de forma sutil e personalizada, prioriza a saúde, o conforto e a simetria de cada paciente.
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed font-light">
+                        No consultório localizado na Vila da Serra em Nova Lima, cada detalhe foi planejado para oferecer uma experiência acolhedora, com tecnologia de ponta, materiais de padrão internacional e rígidos protocolos de biossegurança.
+                    </p>
+
+                    <!-- Pillars list -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-champagne-50 border border-champagne-100">
+                            <i class="fa-solid fa-check-circle text-champagne-500 text-lg mt-0.5"></i>
+                            <div>
+                                <h4 class="font-semibold text-clinicDark text-sm">Avaliação Detalhada</h4>
+                                <p class="text-xs text-gray-500">Análise facial e dental personalizada antes de qualquer procedimento.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-champagne-50 border border-champagne-100">
+                            <i class="fa-solid fa-check-circle text-champagne-500 text-lg mt-0.5"></i>
+                            <div>
+                                <h4 class="font-semibold text-clinicDark text-sm">Produtos Consagrados</h4>
+                                <p class="text-xs text-gray-500">Utilização de marcas líderes com selo de aprovação Anvisa.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instagram Link Box -->
+                    <div class="pt-4 flex items-center justify-between p-4 rounded-2xl border border-gray-200 bg-gray-50">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center text-xl">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Siga no Instagram</p>
+                                <p class="text-sm font-bold text-clinicDark">@dra.alicemf</p>
+                            </div>
+                        </div>
+                        <a href="https://www.instagram.com/dra.alicemf" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="text-xs font-semibold text-champagne-600 border border-champagne-300 hover:bg-champagne-50 px-4 py-2 rounded-full transition">
+                            Acompanhar Casos
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços / Procedimentos Section -->
+    <section id="servicos" class="py-20 bg-champagne-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest text-champagne-600 font-semibold">Tratamentos Exclusivos</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-clinicDark">Procedimentos Realizados</h2>
+                <p class="text-gray-600 font-light">Técnicas avançadas para valorizar o seu sorriso e rejuvenescimento facial com máxima segurança.</p>
+            </div>
+
+            <!-- Service Category Filter Tabs -->
+            <div class="flex justify-center gap-2 mb-10 flex-wrap" id="serviceTabs">
+                <button onclick="filterServices('all')" class="tab-btn active font-medium text-xs sm:text-sm px-5 py-2.5 rounded-full border border-champagne-300 bg-clinicDark text-white transition">Todos</button>
+                <button onclick="filterServices('facial')" class="tab-btn font-medium text-xs sm:text-sm px-5 py-2.5 rounded-full border border-champagne-200 bg-white text-gray-700 hover:bg-champagne-100 transition">Estética Facial</button>
+                <button onclick="filterServices('dental')" class="tab-btn font-medium text-xs sm:text-sm px-5 py-2.5 rounded-full border border-champagne-200 bg-white text-gray-700 hover:bg-champagne-100 transition">Estética Dental</button>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="servicesContainer">
+                
+                <!-- Service Card 1 -->
+                <div class="service-card facial bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 border border-champagne-100 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-champagne-100 text-champagne-600 flex items-center justify-center text-xl mb-5 group-hover:bg-champagne-500 group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-sparkles"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-clinicDark mb-2">Toxina Botulínica (Botox)</h3>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">
+                            Prevenção e suavização de linhas de expressão dinâmicas na testa, glabela e pés de galinha com aspecto natural.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-champagne-600 font-semibold">
+                        <span>Procedimento Rápido</span>
+                        <a href="https://wa.me/5531971377741?text=Ol%C3%A1%2C%20Dra.%20Alice!%20Gostaria%20de%20saber%20mais%20sobre%20Toxina%20Botul%C3%ADnica." target="_blank" class="hover:underline flex items-center gap-1">
+                            Saber mais <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card facial bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 border border-champagne-100 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-champagne-100 text-champagne-600 flex items-center justify-center text-xl mb-5 group-hover:bg-champagne-500 group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-[#F0C2A0] fa-droplet"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-clinicDark mb-2">Preenchimento com Ácido Hialurônico</h3>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">
+                            Preenchimento labial, olheiras, malar (maçãs do rosto), sulco nasogeniano (bigode chinês) e contorno mandíbular.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-champagne-600 font-semibold">
+                        <span>Volume & Contorno</span>
+                        <a href="https://wa.me/5531971377741?text=Ol%C3%A1%2C%20Dra.%20Alice!%20Gostaria%20de%20informA%C3%A7%C3%B5es%20sobre%20Preenchimento." target="_blank" class="hover:underline flex items-center gap-1">
+                            Saber mais <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card facial bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 border border-champagne-100 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-champagne-100 text-champagne-600 flex items-center justify-center text-xl mb-5 group-hover:bg-champagne-500 group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-clinicDark mb-2">Bioestimuladores de Colágeno</h3>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">
+                            Estímulo da produção natural de colágeno para combate à flacidez e melhoria contínua da firmeza e firmeza da pele.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-champagne-600 font-semibold">
+                        <span>Firmeza & Firmeza</span>
+                        <a href="https://wa.me/5531971377741?text=Ol%C3%A1%2C%20Dra.%20Alice!%20Tenho%20interesse%20em%20Bioestimuladores." target="_blank" class="hover:underline flex items-center gap-1">
+                            Saber mais <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card dental bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 border border-champagne-100 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-champagne-100 text-champagne-600 flex items-center justify-center text-xl mb-5 group-hover:bg-champagne-500 group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-tooth"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-clinicDark mb-2">Clareamento Dental</h3>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">
+                            Clareamento de consultório e/ou caseiro com acompanhamento profissional para um sorriso radiante e uniforme.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-champagne-600 font-semibold">
+                        <span>Sorriso Iluminado</span>
+                        <a href="https://wa.me/5531971377741?text=Ol%C3%A1%2C%20Dra.%20Alice!%20Gostaria%20de%20agendar%20um%20Clareamento." target="_blank" class="hover:underline flex items-center gap-1">
+                            Saber mais <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card dental bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 border border-champagne-100 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-champagne-100 text-champagne-600 flex items-center justify-center text-xl mb-5 group-hover:bg-champagne-500 group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-clinicDark mb-2">Lentes de Contato Dental & Facetas</h3>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">
+                            Correção de formato, cor e pequenos desalinhamentos com lâminas ultrafinas em porcelana ou resina de alta resistência.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-champagne-600 font-semibold">
+                        <span>Transformação de Sorriso</span>
+                        <a href="https://wa.me/5531971377741?text=Ol%C3%A1%2C%20Dra.%20Alice!%20Quero%20saber%20sobre%20Lentes%20Dentais." target="_blank" class="hover:underline flex items-center gap-1">
+                            Saber mais <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card facial bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition duration-300 border border-champagne-100 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-champagne-100 text-champagne-600 flex items-center justify-center text-xl mb-5 group-hover:bg-champagne-500 group-hover:text-white transition duration-300">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-clinicDark mb-2">Limpeza Ultra-som & Skin Care Odontológico</h3>
+                        <p class="text-gray-600 text-sm font-light leading-relaxed mb-4">
+                            Profilaxia completa para manutenção da saúde gengival e preparação ideal da pele labial e perioral.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-champagne-600 font-semibold">
+                        <span>Saúde & Prevenção</span>
+                        <a href="https://wa.me/5531971377741?text=Ol%C3%A1%2C%20Dra.%20Alice!%20Gostaria%20de%20agendar%20uma%20limpeza." target="_blank" class="hover:underline flex items-center gap-1">
+                            Saber mais <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais Section -->
+    <section id="diferenciais" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-champagne-600 font-semibold">Por que nos escolher</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-clinicDark leading-tight">
+                        Diferenciais que garantem sua tranquilidade e satisfação
+                    </h2>
+                    <p class="text-gray-600 font-light leading-relaxed">
+                        Entendemos que intervenções estéticas exigem confiança e escuta atenta. Por isso, oferecemos um fluxo de atendimento pensado exclusivamente para o seu conforto.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-champagne-50/70 border border-champagne-100">
+                            <div class="w-10 h-10 rounded-full bg-champagne-500 text-white flex items-center justify-center shrink-0 font-bold">
+                                01
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-clinicDark text-base">Atendimento Exclusivo e Sem Pressa</h4>
+                                <p class="text-xs sm:text-sm text-gray-600 font-light mt-1">Consultas com tempo dedicado para sanar dúvidas, compreender expectativas e alinhar o plano ideal.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-champagne-50/70 border border-champagne-100">
+                            <div class="w-10 h-10 rounded-full bg-champagne-500 text-white flex items-center justify-center shrink-0 font-bold">
+                                02
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-clinicDark text-base">Planejamento Anatômico & Sutil</h4>
+                                <p class="text-xs sm:text-sm text-gray-600 font-light mt-1">Procedimentos guiados para valorizar suas características originais sem exagero ou artificialidade.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-champagne-50/70 border border-champagne-100">
+                            <div class="w-10 h-10 rounded-full bg-champagne-500 text-white flex items-center justify-center shrink-0 font-bold">
+                                03
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-clinicDark text-base">Localização Privilegiada em Vila da Serra</h4>
+                                <p class="text-xs sm:text-sm text-gray-600 font-light mt-1">Ambiente discreto, fácil acesso, segurança reforçada e total privacidade para nossos pacientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="bg-clinicDark text-white p-6 rounded-2xl shadow-lg space-y-2">
+                                <span class="text-3xl font-bold font-serif text-champagne-300">5.0★</span>
+                                <h4 class="text-sm font-semibold">Avaliação Máxima</h4>
+                                <p class="text-xs text-gray-400 font-light">Nota no Google com 100% de satisfação declarada.</p>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=400" 
+                                 alt="Estrutura do consultório" 
+                                 class="rounded-2xl h-48 w-full object-cover shadow-md"
+                                 onerror="this.src='https://placehold.co/400x300/F4EFE6/6F5538?text=Consult%C3%B3rio'">
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=400" 
+                                 alt="Detalhe do atendimento" 
+                                 class="rounded-2xl h-48 w-full object-cover shadow-md"
+                                 onerror="this.src='https://placehold.co/400x300/F4EFE6/6F5538?text=Atendimento'">
+                            <div class="bg-champagne-200/50 p-6 rounded-2xl border border-champagne-300 space-y-2">
+                                <span class="text-3xl font-bold font-serif text-clinicDark">100%</span>
+                                <h4 class="text-sm font-semibold text-clinicDark">Segurança & Higiene</h4>
+                                <p class="text-xs text-gray-600 font-light">Acompanhamento contínuo no pós-procedimento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos / Google Reviews Section -->
+    <section id="depoimentos" class="py-20 bg-champagne-50/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs uppercase tracking-widest text-champagne-600 font-semibold">Opinião dos Pacientes</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-clinicDark">O que dizem no Google</h2>
+                <p class="text-gray-600 font-light">Transparência e resultados comprovados por quem já transformou seu sorriso conosco.</p>
+            </div>
+
+            <!-- Google Review Overall Score Header Card -->
+            <div class="max-w-xl mx-auto bg-white rounded-2xl p-6 shadow-md border border-champagne-200 mb-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="text-center sm:text-left">
+                    <div class="flex items-center justify-center sm:justify-start gap-2">
+                        <span class="text-4xl font-bold font-serif text-clinicDark">5,0</span>
+                        <div class="flex text-amber-400 text-lg">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-1">Média baseada nas avaliações recentes do Google</p>
+                </div>
+                <div class="h-10 w-[1px] bg-gray-200 hidden sm:block"></div>
+                <a href="https://www.google.com/search?q=Dra+Alice+Mariano+Nova+Lima" 
+                   target="_blank" 
+                   class="inline-flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-clinicDark px-4 py-2 rounded-full text-xs font-semibold transition">
+                    <i class="fa-brands fa-google text-blue-500"></i>
+                    Ver todas no Google
+                </a>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Review Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-champagne-100 flex flex-col justify-between relative">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-champagne-200 text-3xl"></i>
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm font-light leading-relaxed italic">
+                            "A Dra. Alice é extremamente atenciosa e detalhista! Fiz toxina botulínica e o resultado ficou supersuave e natural, do jeito que eu desejava. A clínica na Vila da Serra é linda e confortável."
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-gray-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-champagne-300 text-champagne-800 font-bold flex items-center justify-center text-sm">
+                            M
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-clinicDark text-sm">Mariana S.</h4>
+                            <p class="text-xs text-gray-400">Paciente verificada via Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-champagne-100 flex flex-col justify-between relative">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-champagne-200 text-3xl"></i>
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm font-light leading-relaxed italic">
+                            "Profissional impecável. Explica cada etapa do procedimento com paciência e transmite muita segurança. Fiz clareamento e harmonização, recomendo de olhos fechados!"
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-gray-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-champagne-300 text-champagne-800 font-bold flex items-center justify-center text-sm">
+                            C
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-clinicDark text-sm">Camila R.</h4>
+                            <p class="text-xs text-gray-400">Paciente verificada via Google</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização & Contato Section -->
+    <section id="localizacao" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs uppercase tracking-widest text-champagne-600 font-semibold">Onde Estamos</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-clinicDark">Localização & Horários de Atendimento</h2>
+                <p class="text-gray-600 font-light">Facilidade de acesso no coração do Vila da Serra em Nova Lima - MG.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Info Column (Hours & Address) -->
+                <div class="lg:col-span-5 space-y-6">
+                    
+                    <!-- Address Card -->
+                    <div class="bg-champagne-50 p-6 rounded-2xl border border-champagne-200 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-champagne-500 text-white rounded-xl text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-clinicDark">Endereço do Consultório</h3>
+                                <p class="text-sm text-gray-700 mt-1 font-light leading-relaxed">
+                                    R. Min. Orozimbo Nonato<br>
+                                    Vila da Serra, Nova Lima - MG<br>
+                                    <span class="text-xs text-gray-500">CEP: 34006-053</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-t border-champagne-200 flex flex-wrap gap-2">
+                            <button onclick="copyAddress()" class="text-xs bg-white hover:bg-champagne-100 border border-champagne-300 text-clinicDark px-3 py-1.5 rounded-lg transition flex items-center gap-1.5">
+                                <i class="fa-regular fa-copy text-champagne-600"></i> Copiar Endereço
+                            </button>
+                            <a href="https://maps.google.com/?q=R.+Min.+Orozimbo+Nonato+-+Vila+da+Serra,+Nova+Lima+-+MG,+34006-053" 
+                               target="_blank" 
+                               class="text-xs bg-clinicDark text-white px-3 py-1.5 rounded-lg hover:bg-gray-800 transition flex items-center gap-1.5">
+                                <i class="fa-solid fa-route"></i> Como Chegar (GPS)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hours Table -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="font-serif font-bold text-lg text-clinicDark flex items-center gap-2">
+                                <i class="fa-regular fa-clock text-champagne-600"></i>
+                                Horário de Funcionamento
+                            </h3>
+                            <span id="hoursStatusBadge" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-gray-600">
+                                Carregando...
+                            </span>
+                        </div>
+
+                        <ul class="text-xs sm:text-sm divide-y divide-gray-100">
+                            <li class="py-2.5 flex justify-between items-center text-gray-500">
+                                <span>Domingo</span>
+                                <span class="font-medium text-rose-600 bg-rose-50 px-2 py-0.5 rounded">Fechado</span>
+                            </li>
+                            <li class="py-2.5 flex justify-between items-center text-gray-700">
+                                <span class="font-medium">Segunda-feira</span>
+                                <span class="font-semibold text-clinicDark">14:30 – 17:30</span>
+                            </li>
+                            <li class="py-2.5 flex justify-between items-center text-gray-700">
+                                <span class="font-medium">Terça-feira</span>
+                                <span class="font-semibold text-clinicDark">09:30 – 12:00</span>
+                            </li>
+                            <li class="py-2.5 flex justify-between items-center text-gray-700">
+                                <span class="font-medium">Quarta-feira</span>
+                                <span class="font-semibold text-clinicDark">14:30 – 17:30</span>
+                            </li>
+                            <li class="py-2.5 flex justify-between items-center text-gray-700">
+                                <span class="font-medium">Quinta-feira</span>
+                                <span class="font-semibold text-clinicDark">14:00 – 17:30</span>
+                            </li>
+                            <li class="py-2.5 flex justify-between items-center text-gray-700">
+                                <span class="font-medium">Sexta-feira</span>
+                                <span class="font-semibold text-clinicDark">09:30 – 12:00</span>
+                            </li>
+                            <li class="py-2.5 flex justify-between items-center text-gray-500">
+                                <span>Sábado</span>
+                                <span class="font-medium text-rose-600 bg-rose-50 px-2 py-0.5 rounded">Fechado</span>
+                            </li>
+                        </ul>
+
+                        <p class="text-[11px] text-gray-400 italic text-center pt-1">
+                            *Atendimentos realizados estritamente mediante agendamento prévio.
+                        </p>
+                    </div>
+
+                    <!-- Direct Contact Card -->
+                    <div class="bg-clinicDark text-white p-6 rounded-2xl space-y-4">
+                        <h4 class="font-serif font-bold text-base text-champagne-200">Contato Direto</h4>
+                        <div class="space-y-2 text-sm">
+                            <p class="flex items-center gap-3">
+                                <i class="fa-solid fa-phone text-champagne-400"></i>
+                                <a href="tel:31971377741" class="hover:underline">(31) 97137-7741</a>
+                            </p>
+                            <p class="flex items-center gap-3">
+                                <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                                <a href="https://wa.me/5531971377741" target="_blank" class="hover:underline">WhatsApp Oficial</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Interactive Booking Message Generator & Map Placeholder -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <!-- WhatsApp Message Generator Form Card -->
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-champagne-200 shadow-lg space-y-6">
+                        <div class="border-b border-gray-100 pb-4">
+                            <h3 class="font-serif font-bold text-xl text-clinicDark">Agendamento Expresso via WhatsApp</h3>
+                            <p class="text-xs text-gray-500 mt-1">Preencha as opções abaixo para iniciar a conversa já com suas preferências:</p>
+                        </div>
+
+                        <form id="whatsappForm" onsubmit="handleWhatsappSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-2">Seu Nome</label>
+                                <input type="text" id="patientName" placeholder="Ex: Maria Silva" required 
+                                       class="w-full px-4 py-3 text-sm rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-champagne-400 bg-gray-50/50">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-2">Procedimento de Interesse</label>
+                                    <select id="selectedProcedure" class="w-full px-4 py-3 text-sm rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-champagne-400 bg-gray-50/50">
+                                        <option value="Avaliação Geral">Avaliação Geral</option>
+                                        <option value="Toxina Botulínica (Botox)">Toxina Botulínica (Botox)</option>
+                                        <option value="Preenchimento Facial">Preenchimento Facial</option>
+                                        <option value="Bioestimulador de Colágeno">Bioestimulador de Colágeno</option>
+                                        <option value="Clareamento Dental">Clareamento Dental</option>
+                                        <option value="Lentes de Contato Dental">Lentes de Contato Dental</option>
+                                        <option value="Outro Tratamento">Outro Tratamento</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-2">Dia de Preferência</label>
+                                    <select id="preferredDay" class="w-full px-4 py-3 text-sm rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-champagne-400 bg-gray-50/50">
+                                        <option value="Segunda-feira (Tarde)">Segunda-feira (Tarde)</option>
+                                        <option value="Terça-feira (Manhã)">Terça-feira (Manhã)</option>
+                                        <option value="Quarta-feira (Tarde)">Quarta-feira (Tarde)</option>
+                                        <option value="Quinta-feira (Tarde)">Quinta-feira (Tarde)</option>
+                                        <option value="Sexta-feira (Manhã)">Sexta-feira (Manhã)</option>
+                                        <option value="Primeiro horário disponível">Primeiro disponível</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-2">Observações (Opcional)</label>
+                                <textarea id="additionalNotes" rows="2" placeholder="Alguma dúvida ou detalhe específico?" 
+                                          class="w-full px-4 py-3 text-sm rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-champagne-400 bg-gray-50/50"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full gold-gradient-bg text-white py-4 rounded-xl font-medium shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center gap-2 text-base">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                Enviar Mensagem para Dra. Alice
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Interactive Map Card Preview -->
+                    <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm relative h-64 bg-slate-100 flex items-center justify-center text-center p-6">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=800');"></div>
+                        <div class="relative z-10 space-y-3 max-w-md bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-champagne-100">
+                            <div class="w-10 h-10 rounded-full bg-champagne-500 text-white flex items-center justify-center mx-auto text-lg shadow-md">
+                                <i class="fa-solid fa-map-pin"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-clinicDark">Vila da Serra - Nova Lima, MG</h4>
+                            <p class="text-xs text-gray-600">Rua Ministro Orozimbo Nonato - CEP 34006-053</p>
+                            <a href="https://maps.google.com/?q=R.+Min.+Orozimbo+Nonato+-+Vila+da+Serra,+Nova+Lima+-+MG,+34006-053" 
+                               target="_blank" 
+                               class="inline-block bg-clinicDark text-white px-5 py-2 rounded-full text-xs font-semibold hover:bg-gray-800 transition">
+                                Abrir no Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-champagne-50/40 border-t border-champagne-200/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-8">
+            <div class="text-center mb-12 space-y-2">
+                <span class="text-xs uppercase tracking-widest text-champagne-600 font-semibold">Dúvidas Frequentes</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-clinicDark">Perguntas Respondidas</h2>
+            </div>
+
+            <div class="space-y-4" id="faqAccordion">
+                
+                <div class="bg-white rounded-xl border border-champagne-200 overflow-hidden">
+                    <button onclick="toggleFaq(1)" class="w-full text-left p-5 font-semibold text-clinicDark text-sm sm:text-base flex justify-between items-center gap-4">
+                        <span>Como funciona a consulta de avaliação inicial?</span>
+                        <i id="faqIcon-1" class="fa-solid fa-chevron-down text-champagne-500 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer-1" class="hidden p-5 pt-0 text-xs sm:text-sm text-gray-600 font-light border-t border-gray-50">
+                        Na primeira consulta, a Dra. Alice realiza um exame detalhado da sua anatomia facial e dental, entende suas expectativas e elabora um plano de tratamento personalizado, explicitando cada etapa e produtos recomendados.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-champagne-200 overflow-hidden">
+                    <button onclick="toggleFaq(2)" class="w-full text-left p-5 font-semibold text-clinicDark text-sm sm:text-base flex justify-between items-center gap-4">
+                        <span>Os procedimentos de harmonização facial são dolorosos?</span>
+                        <i id="faqIcon-2" class="fa-solid fa-chevron-down text-champagne-500 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer-2" class="hidden p-5 pt-0 text-xs sm:text-sm text-gray-600 font-light border-t border-gray-50">
+                        Não. Utilizamos anestésicos tópicos e/ou injetáveis de alta eficácia, tornando todas as aplicações confortáveis e bem toleradas.
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-champagne-200 overflow-hidden">
+                    <button onclick="toggleFaq(3)" class="w-full text-left p-5 font-semibold text-clinicDark text-sm sm:text-base flex justify-between items-center gap-4">
+                        <span>É necessário agendar horário previamente?</span>
+                        <i id="faqIcon-3" class="fa-solid fa-chevron-down text-champagne-500 transition-transform"></i>
+                    </button>
+                    <div id="faqAnswer-3" class="hidden p-5 pt-0 text-xs sm:text-sm text-gray-600 font-light border-t border-gray-50">
+                        Sim. Para garantir privacidade, pontualidade e o tempo necessário para cada paciente, todos os atendimentos no consultório de Nova Lima são realizados exclusivamente com hora marcada.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-clinicDark text-white pt-16 pb-8 border-t border-champagne-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-gray-800">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="md:col-span-2 space-y-4">
+                    <span class="font-serif text-2xl font-semibold text-white tracking-wide">
+                        Dra. Alice Mariano
+                    </span>
+                    <p class="text-xs text-champagne-300 uppercase tracking-widest font-medium">
+                        Odontologia Estética & Harmonização Facial
+                    </p>
+                    <p class="text-xs text-gray-400 font-light max-w-sm leading-relaxed">
+                        Consultório voltado para a promoção da auto-estima, estética dental e rejuvenescimento facial harmônico em Nova Lima - MG.
+                    </p>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div class="space-y-3 text-xs">
+                    <h4 class="font-semibold text-champagne-200 uppercase tracking-wider text-sm">Navegação</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#sobre" class="hover:text-white transition">Sobre a Dra. Alice</a></li>
+                        <li><a href="#servicos" class="hover:text-white transition">Procedimentos</a></li>
+                        <li><a href="#diferenciais" class="hover:text-white transition">Nossos Diferenciais</a></li>
+                        <li><a href="#depoimentos" class="hover:text-white transition">Avaliações dos Pacientes</a></li>
+                        <li><a href="#localizacao" class="hover:text-white transition">Localização</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Social & Contact -->
+                <div class="space-y-3 text-xs">
+                    <h4 class="font-semibold text-champagne-200 uppercase tracking-wider text-sm">Redes & Contato</h4>
+                    <div class="flex items-center gap-3 pt-1">
+                        <a href="https://www.instagram.com/dra.alicemf" target="_blank" aria-label="Instagram" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-champagne-500 hover:text-white flex items-center justify-center text-lg transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5531971377741" target="_blank" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-emerald-600 hover:text-white flex items-center justify-center text-lg transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 pt-2">(31) 97137-7741</p>
+                    <p class="text-gray-400">Nova Lima - MG</p>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Note -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+                <p>&copy; <span id="currentYear"></span> Dra. Alice Mariano. Todos os direitos reservados.</p>
+                <p>Desenvolvido para Odontologia e Estética Avançada.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Box -->
+    <div id="toastNotification" class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-clinicDark text-white text-xs px-5 py-3 rounded-full shadow-2xl z-50 hidden border border-champagne-400">
+        <span id="toastText">Endereço copiado para a área de transferência!</span>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        function checkClinicOpenStatus() {
+            // Schedule based on official hours:
+            // Segunda-feira: 14:30–17:30
+            // Terça-feira: 09:30–12:00
+            // Quarta-feira: 14:30–17:30
+            // Quinta-feira: 14:00–17:30
+            // Sexta-feira: 09:30–12:00
+            // Sábado & Domingo: Fechado
+
+            const now = new Date();
+            const day = now.getDay(); // 0 = Sun, 1 = Mon, 2 = Tue, 3 = Wed, 4 = Thu, 5 = Fri, 6 = Sat
+            const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+            let isOpen = false;
+
+            if (day === 1) { // Monday 14:30 to 17:30
+                isOpen = currentMinutes >= (14 * 60 + 30) && currentMinutes <= (17 * 60 + 30);
+            } else if (day === 2) { // Tuesday 09:30 to 12:00
+                isOpen = currentMinutes >= (9 * 60 + 30) && currentMinutes <= (12 * 60);
+            } else if (day === 3) { // Wednesday 14:30 to 17:30
+                isOpen = currentMinutes >= (14 * 60 + 30) && currentMinutes <= (17 * 60 + 30);
+            } else if (day === 4) { // Thursday 14:00 to 17:30
+                isOpen = currentMinutes >= (14 * 60) && currentMinutes <= (17 * 60 + 30);
+            } else if (day === 5) { // Friday 09:30 to 12:00
+                isOpen = currentMinutes >= (9 * 60 + 30) && currentMinutes <= (12 * 60);
+            }
+
+            const topBadge = document.getElementById('liveStatusBadge');
+            const hoursBadge = document.getElementById('hoursStatusBadge');
+
+            if (isOpen) {
+                if(topBadge) {
+                    topBadge.className = "hidden md:inline-flex items-center gap-1.5 font-medium px-2 py-0.5 rounded text-xs bg-emerald-950 text-emerald-300 border border-emerald-800";
+                    topBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Aberto Agora';
+                }
+                if(hoursBadge) {
+                    hoursBadge.className = "text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200";
+                    hoursBadge.textContent = "Aberto Agora";
+                }
+            } else {
+                if(topBadge) {
+                    topBadge.className = "hidden md:inline-flex items-center gap-1.5 font-medium px-2 py-0.5 rounded text-xs bg-amber-950 text-amber-300 border border-amber-800";
+                    topBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-amber-400"></span> Fechado Agora (Atendimento c/ Hora Marcada)';
+                }
+                if(hoursBadge) {
+                    hoursBadge.className = "text-xs font-semibold px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200";
+                    hoursBadge.textContent = "Fechado neste momento";
+                }
+            }
+        }
+
+        checkClinicOpenStatus();
+
+        function filterServices(category) {
+            const cards = document.querySelectorAll('.service-card');
+            const buttons = document.querySelectorAll('#serviceTabs button');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-clinicDark', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-700');
+            });
+
+            event.target.classList.remove('bg-white', 'text-gray-700');
+            event.target.classList.add('bg-clinicDark', 'text-white');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function handleWhatsappSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('patientName').value.trim();
+            const procedure = document.getElementById('selectedProcedure').value;
+            const preferredDay = document.getElementById('preferredDay').value;
+            const notes = document.getElementById('additionalNotes').value.trim();
+
+            let message = `Olá, Dra. Alice Mariano! Meu nome é *${name}*.\n`;
+            message += `Gostaria de agendar uma consulta de avaliação para: *${procedure}*.\n`;
+            message += `Preferência de dia/horário: *${preferredDay}*.\n`;
+
+            if (notes) {
+                message += `Observação: ${notes}\n`;
+            }
+
+            message += `\nEnviado através do site institucional.`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/5531971377741?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function copyAddress() {
+            const textToCopy = "Dra. Alice Mariano - R. Min. Orozimbo Nonato, Vila da Serra, Nova Lima - MG, 34006-053";
+            
+            const tempInput = document.createElement("textarea");
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast("Endereço copiado com sucesso!");
+        }
+
+        function showToast(text) {
+            const toast = document.getElementById('toastNotification');
+            const toastText = document.getElementById('toastText');
+            toastText.textContent = text;
+            toast.classList.remove('hidden');
+
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        function toggleFaq(id) {
+            const answer = document.getElementById(`faqAnswer-${id}`);
+            const icon = document.getElementById(`faqIcon-${id}`);
+
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+</html>
